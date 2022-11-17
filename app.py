@@ -5,4 +5,5 @@ if __name__ == '__main__':
 
 @app.route("/")
 def hello():
-    return f'{"name":"ofri", "age": 21}'
+    print('{"name":"ofri", "age": 21}')
+    return '{"name":"ofri", "age": 21}'

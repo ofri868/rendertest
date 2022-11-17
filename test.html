@@ -11,9 +11,11 @@
 <body>
     <p id="test"></p>
     <script>
-        const MYSERVER = ""
+        const MYSERVER = "https://rendertest-ywit.onrender./test"
         const loadBooks = async () => {
-            let arr = await fetch(MYSERVER).then(response => response.json())
+            let arr = await axios.get(`${MYSERVER}`)
+            .then(response => response.json())
+            console.log(arr)
             test.INNERhtml=arr
         }
     </script>
