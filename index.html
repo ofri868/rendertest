@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <p id="test"></p>
+    <p id="test">hello</p>
     <script>
         const MYSERVER = "https://rendertest-ywit.onrender./test"
         const loadBooks = async () => {
             let arr = await axios.get(`${MYSERVER}`)
             .then(response => response.json())
-            console.log(arr)
-            test.INNERhtml=arr
+            console.log(arr.data)
+            test.INNERhtml=arr.data
         }
     </script>
 </body>
